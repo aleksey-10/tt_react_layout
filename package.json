@@ -30,5 +30,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@mate-academy/eslint-config": "0.0.12",
+    "@mate-academy/stylelint-config": "0.0.9",
+    "eslint": "^7.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.6.1"
   }
 }

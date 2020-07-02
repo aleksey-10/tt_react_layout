@@ -1,0 +1,53 @@
+.promo {
+  background: center / cover no-repeat url(../../assets/images/banner-photo.jpg);
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #fff;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__description,
+  &__short-description {
+    line-height: 1.5;
+
+  }
+
+  &__description {
+    margin: 39px 0;
+    width: 60%;
+    min-width: 440px;
+  }
+
+  &__short-description {
+    display: none;
+    margin: 29px 0 26px;
+  }
+}
+
+@media (max-width: $resolution-tablet) {
+  .promo {
+    height: 500px;
+  }
+}
+
+@media (max-width: $resolution-mobile) {
+  .promo {
+    height: 400px;
+    text-align: center;
+    align-items: center;
+
+    &__description {
+      display: none;
+    }
+
+    &__short-description {
+      display: block;
+    }
+  }
+}

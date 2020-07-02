@@ -1,0 +1,14 @@
+@mixin hover($property, $value, $duration: 250ms) {
+  transition: #{$property} $duration;
+  
+  &:hover {
+    #{$property}: $value;
+  }
+}
+
+@mixin text-overflow() {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

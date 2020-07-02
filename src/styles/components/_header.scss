@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: $bg-color-primary;
+
+  &__nav-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $resolution-tablet) {
+  .header {
+    &__nav {
+      display: none;
+    }
+
+    &__nav-mobile {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $resolution-mobile) {
+  .header {
+    height: 40px;
+  }
+}

@@ -1,0 +1,35 @@
+.nav {
+  &__list {
+    display: flex;
+    height: 100%;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $color-third;
+    padding: 10px 0;
+
+    @include hover(color, $color-primary);
+
+    &--active {
+      color: $color-secondary;
+    }
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-mobile {
+  &__burger {
+    width: 20px;
+    height: 15px;
+    background-image: url(../../assets/images/burger.svg);
+    cursor: pointer;
+  }
+}

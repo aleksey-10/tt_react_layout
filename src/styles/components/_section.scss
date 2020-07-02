@@ -1,0 +1,15 @@
+.section {
+  padding: 160px 0;
+}
+
+@media (max-width: $resolution-tablet) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: $resolution-mobile) {
+  .section {
+    padding: 80px 0;
+  }
+}

@@ -1,0 +1,33 @@
+h1,
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+input {
+  outline: none;
+}
+
+a,
+button {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin: 0;
+}

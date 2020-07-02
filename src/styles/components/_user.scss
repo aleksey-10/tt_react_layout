@@ -1,0 +1,18 @@
+.user {
+  text-align: center;
+  overflow: hidden;
+  width: 200px;
+
+  &__email {
+    @include text-overflow;
+  }
+
+  &__photo {
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin: 20px 0;
+  }
+}

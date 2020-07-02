@@ -1,0 +1,15 @@
+.registration {
+  &__title,
+  &__attention {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__attention {
+    color: $color-third;
+    margin-bottom: 36px;
+  }
+}

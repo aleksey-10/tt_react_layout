@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tt_react_layout/static/css/main.d867ad95.chunk.css",
+    "main.js": "/tt_react_layout/static/js/main.0fb297f7.chunk.js",
+    "main.js.map": "/tt_react_layout/static/js/main.0fb297f7.chunk.js.map",
+    "runtime-main.js": "/tt_react_layout/static/js/runtime-main.69117831.js",
+    "runtime-main.js.map": "/tt_react_layout/static/js/runtime-main.69117831.js.map",
+    "static/js/2.98862853.chunk.js": "/tt_react_layout/static/js/2.98862853.chunk.js",
+    "static/js/2.98862853.chunk.js.map": "/tt_react_layout/static/js/2.98862853.chunk.js.map",
+    "index.html": "/tt_react_layout/index.html",
+    "precache-manifest.6525a77f65e67f8c3f015cb0421458d2.js": "/tt_react_layout/precache-manifest.6525a77f65e67f8c3f015cb0421458d2.js",
+    "service-worker.js": "/tt_react_layout/service-worker.js",
+    "static/css/main.d867ad95.chunk.css.map": "/tt_react_layout/static/css/main.d867ad95.chunk.css.map",
+    "static/js/2.98862853.chunk.js.LICENSE.txt": "/tt_react_layout/static/js/2.98862853.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/tt_react_layout/static/media/burger.6f6bef28.svg",
+    "static/media/logo.svg": "/tt_react_layout/static/media/logo.146e2926.svg",
+    "static/media/man-laptop-v1.svg": "/tt_react_layout/static/media/man-laptop-v1.3cdf7897.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69117831.js",
+    "static/js/2.98862853.chunk.js",
+    "static/css/main.d867ad95.chunk.css",
+    "static/js/main.0fb297f7.chunk.js"
+  ]
+}

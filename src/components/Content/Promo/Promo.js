@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Promo = () => (
-  <section className="promo container">
+  <section className="promo container-custom">
     <h1 className="promo__title">
       <div>Test assignment</div>
       <div>for Frontend</div>

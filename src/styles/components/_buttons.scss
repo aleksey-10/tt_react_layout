@@ -13,6 +13,13 @@
 
   background-color: $color-primary;
   @include hover(background-color, darken($color-primary, 10%));
+
+  &:disabled {
+    background-color: lightgray;
+    color: gray;
+    border: 1px solid silver;
+    cursor: default;
+  }
 }
 
 .flat-button {

@@ -12,4 +12,14 @@ export const api = {
   getPositions() {
     return instance.get('/positions').then(response => response.data);
   },
+  async sendUserData(user) {
+    const response = await instance.get('/token');
+    const { token } = response.data;
+
+    return instance.post('/users', user, {
+      headers: {
+        Token: token,
+      },
+    });
+  },
 };

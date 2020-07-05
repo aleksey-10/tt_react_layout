@@ -1,39 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter, BrowserRouter } from 'react-router-dom';
 
 export const Nav = () => (
-  <nav className="header__nav nav">
+  <nav className="header-custom__nav nav">
     <ul className="nav__list">
-      <NavItem title="About me" link="#about" />
-      <NavItem title="Relationship" link="#home" />
-      <NavItem
-        title="Requirements"
-        link="#home"
-        isActive={true}
-      />
-      <NavItem title="Users" link="#users" />
-      <NavItem title="Sign Up" link="#registration" />
+      <BrowserRouter>
+        <NavItemWithRouter title="About me" link="about" />
+        <NavItemWithRouter title="Relationship" link="home" />
+        <NavItemWithRouter title="Requirements" link="requirements" />
+        <NavItemWithRouter title="Users" link="users" />
+        <NavItemWithRouter title="Sign Up" link="registration" />
+      </BrowserRouter>
     </ul>
   </nav>
 );
 
-const NavItem = ({ title, link, isActive }) => (
-  <li className="nav__item">
-    <a
-      className={`nav__link ${isActive && 'nav__link--active'}`}
-      href={link}
-    >
-      {title}
-    </a>
-  </li>
-);
+const NavItem = (props) => {
+  const { title, link } = props;
+  const isActive = `#${link}` === props.location.hash;
 
-NavItem.defaultProps = {
-  isActive: false,
+  return (
+    <li className="nav__item">
+      <a
+        className={`nav__link ${isActive && 'nav__link--active'}`}
+        href={`#${link}`}
+      >
+        {title}
+      </a>
+    </li>
+  );
 };
+
+const NavItemWithRouter = withRouter(NavItem);
 
 NavItem.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  isActive: PropTypes.bool,
+  location: PropTypes.shape({ hash: PropTypes.string }).isRequired,
 };

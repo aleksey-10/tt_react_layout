@@ -21,7 +21,7 @@ export const PositionField = ({ register }) => {
             <RadioItem
               key={position.id}
               title={position.name}
-              id={position.name.replace(/\s/, '')}
+              id={position.id}
               register={register}
               checked={index === 0}
             />
@@ -39,14 +39,15 @@ PositionField.propTypes = {
 const RadioItem = ({ title, id, register, checked }) => (
   <div className="radio">
     <input
+      className="custom-radio"
       type="radio"
-      name="position"
-      id={id}
-      value={title}
+      name="position_id"
+      id={title.replace(/\s/, '')}
+      value={id}
       ref={register()}
       defaultChecked={checked}
     />
-    <label className="radio__label" htmlFor={id}>
+    <label className="radio__label" htmlFor={title.replace(/\s/, '')}>
       {title}
     </label>
   </div>
@@ -54,7 +55,7 @@ const RadioItem = ({ title, id, register, checked }) => (
 
 RadioItem.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   register: PropTypes.func.isRequired,
   checked: PropTypes.bool.isRequired,
 };

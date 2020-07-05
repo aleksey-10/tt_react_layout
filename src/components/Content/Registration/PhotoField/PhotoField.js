@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import bsCustomFileInput from 'bs-custom-file-input';
+
+bsCustomFileInput.init();
 
 export const PhotoField = ({ register, error }) => (
   <div className="form__item">
-    <label className="form__label" htmlFor="fieldPhoto">Photo</label>
-    <input
-      className={`form__input${error ? ' form__input--invalid' : ''}`}
-      type="file"
-      name="photo"
-      id="fieldPhoto"
-      placeholder="Your name"
-      ref={register({ required: true })}
-    />
+    <span className="form__label">Photo</span>
+    <div className="custom-file">
+      <label
+        htmlFor="fieldPhoto"
+        className="custom-file-label"
+        style={{ color: '#b2b9c0' }}
+      >
+        Upload your photo
+      </label>
+      <input
+        className="custom-file-input invalid is-valid"
+        type="file"
+        name="photo"
+        id="fieldPhoto"
+        ref={register({ required: true })}
+        accept="image/jpg,image/jpeg"
+      />
+    </div>
     {
       error && error.type === 'required'
       && <small className="form__error">This field is required</small>

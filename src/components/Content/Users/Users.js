@@ -7,7 +7,7 @@ export const Users = () => (
     <p className="users__attention">
       Attention! Sorting users by registration date
     </p>
-    <div className="users__content container">
+    <div className="users__content container-custom">
       <UsersList />
     </div>
   </section>

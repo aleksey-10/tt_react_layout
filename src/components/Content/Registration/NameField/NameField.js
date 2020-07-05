@@ -12,7 +12,8 @@ export const NameField = ({ register, error }) => (
       placeholder="Your name"
       ref={register({
         required: true,
-        minLength: 4,
+        minLength: 2,
+        maxLength: 60,
       })}
     />
     {
@@ -21,7 +22,11 @@ export const NameField = ({ register, error }) => (
     }
     {
       error && error.type === 'minLength'
-      && <small className="form__error">Min length is 4</small>
+      && <small className="form__error">Min length is 2 symbols</small>
+    }
+    {
+      error && error.type === 'maxLength'
+      && <small className="form__error">Min length is 60 symbols</small>
     }
   </div>
 );

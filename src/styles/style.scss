@@ -26,12 +26,12 @@ body {
   margin: 0 auto;
 }
 
-.container {
+.container-custom {
   padding: 0 30px;
 }
 
 @media (max-width: $resolution-mobile) {
-  .container {
+  .container-custom {
     padding: 0 15px;
   }
 }

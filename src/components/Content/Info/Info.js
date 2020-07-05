@@ -3,8 +3,8 @@ import manLaptop from '../../../assets/images/man-laptop-v1.svg';
 
 export const Info = () => (
   <section className="info section" id="about">
-    <h1 className="info__title">Let's get acquainted</h1>
-    <div className="info__content container">
+    <h1 className="info__title">Let&apos;s get acquainted</h1>
+    <div className="info__content container-custom">
       <img
         src={manLaptop}
         alt="Man laptop"

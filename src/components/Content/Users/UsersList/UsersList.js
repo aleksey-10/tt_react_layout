@@ -1,70 +1,62 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { api } from '../../../../api/api';
 import { User } from '../User/User';
 import { photoCover } from '../../../../assets/images/photo-cover.png';
 import { ShowMore } from '../ShowMore';
 
-export class UsersList extends Component {
-  state = {
-    page: 1,
-    count: 6,
-    users: [],
-    isLoading: true,
-    couldBeFetched: true,
-  }
+export const UsersList = (props) => {
+  const [page, setPages] = useState(1);
+  const count = 6;
+  const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [couldBeFetched, setCouldBeFetched] = useState(true);
 
-  #getUsers = () => {
-    api.getUsers(this.state.page + 1, this.state.count)
-      .then(data => {
-        const { users, links } = data;
+  const getUsers = () => {
+    api.getUsers(page + 1, count)
+      .then((data) => {
+        const { links } = data;
 
-        this.setState(prevState => ({
-          isLoading: false,
-          users: [
-            ...prevState.users,
-            ...users,
-          ],
-          page: prevState.page + 1,
-          couldBeFetched: !!links.next_url,
-        }));
+        setIsLoading(false);
+        setUsers(prev => [
+          ...prev,
+          ...data.users,
+        ]);
+        setPages(page + 1);
+        setCouldBeFetched(!!links.next_url);
       });
-  }
+  };
 
-  componentDidMount() {
-    this.#getUsers();
-  }
+  useEffect(getUsers, []);
 
-  loadMore = () => {
-    this.setState({ isLoading: true });
-    this.#getUsers();
-  }
+  const loadMore = () => {
+    setIsLoading(true);
+    getUsers();
+  };
 
-  render() {
-    return (
-      <>
-        <ul className="users__list">
-          {
-            this.state.users.map(user => (
-              <User
-                key={user.id}
-                photo={user.photo || photoCover}
-                name={user.name}
-                position={user.position}
-                email={user.email}
-                phone={user.phone}
-              />
-            ))
-          }
-        </ul>
+  return (
+    <>
+      <ul className="users__list">
         {
-          this.state.couldBeFetched && (
-            <ShowMore
-              handleClick={this.loadMore}
-              isLoading={this.state.isLoading}
+          users.map(user => (
+            <User
+              key={user.id}
+              photo={user.photo || photoCover}
+              name={user.name}
+              position={user.position}
+              email={user.email}
+              phone={user.phone}
             />
-          )
+          ))
         }
-      </>
-    );
-  }
-}
+      </ul>
+      {
+        couldBeFetched && (
+          <ShowMore
+            handleClick={loadMore}
+            isLoading={isLoading}
+          />
+        )
+      }
+    </>
+  );
+};

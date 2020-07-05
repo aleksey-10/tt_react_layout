@@ -4,9 +4,9 @@ import { Nav } from './Nav';
 import { NavMobile } from './NavMobile';
 
 export const Header = () => (
-  <header className="header container">
+  <header className="header-custom container-custom">
     <img src={logo} alt="logo" />
     <Nav />
     <NavMobile />
   </header>
-)
+);

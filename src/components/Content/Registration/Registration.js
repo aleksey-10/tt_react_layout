@@ -8,6 +8,8 @@ export const Registration = () => (
       Attention! After successful registration and alert,
       update the list of users in the block from the top
     </p>
-    <Form />
+    <div className="container-custom">
+      <Form />
+    </div>
   </section>
 );

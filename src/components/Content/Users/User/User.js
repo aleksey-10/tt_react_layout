@@ -14,9 +14,8 @@ export const User = memo(
       <span className="user__email">{props.email}</span>
       <span className="user__phone">{props.phone}</span>
     </li>
-  )
+  ),
 );
-
 
 User.propTypes = {
   name: PropTypes.string.isRequired,

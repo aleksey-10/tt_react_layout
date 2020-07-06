@@ -1,32 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import bsCustomFileInput from 'bs-custom-file-input';
+import { Form } from 'react-bootstrap';
 
 bsCustomFileInput.init();
 
 export const PhotoField = ({ register, error }) => (
   <div className="form__item">
     <span className="form__label">Photo</span>
-    <div className="custom-file">
-      <label
-        htmlFor="fieldPhoto"
-        className="custom-file-label"
-        style={{ color: '#b2b9c0' }}
-      >
-        Upload your photo
-      </label>
-      <input
-        className="custom-file-input invalid is-valid"
-        type="file"
-        name="photo"
-        id="fieldPhoto"
-        ref={register({ required: true })}
-        accept="image/jpg,image/jpeg"
-      />
-    </div>
+    <Form.File
+      name="photo"
+      label="Upload your photo"
+      ref={register({
+        required: true,
+        validate: {
+          size: value => value[0].size < 2 ** 10 * 5,
+        },
+      })}
+      accept="image/jpg,image/jpeg"
+      custom
+      isInvalid={error}
+    />
     {
       error && error.type === 'required'
       && <small className="form__error">This field is required</small>
+    }
+    {
+      error && error.type === 'size'
+      && <small className="form__error">Max photo size is 5 Mb</small>
     }
   </div>
 );

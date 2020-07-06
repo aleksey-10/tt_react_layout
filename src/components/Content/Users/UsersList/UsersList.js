@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { api } from '../../../../api/api';
 import { User } from '../User/User';
 import { photoCover } from '../../../../assets/images/photo-cover.png';
 import { ShowMore } from '../ShowMore';
+import { Context } from '../../../../context';
 
 export const UsersList = (props) => {
   const [page, setPages] = useState(1);
@@ -11,27 +12,36 @@ export const UsersList = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [couldBeFetched, setCouldBeFetched] = useState(true);
 
+  const { resetUsers, handleResetUsers } = useContext(Context);
+
   const getUsers = () => {
-    api.getUsers(page + 1, count)
+    api.getUsers(page, count)
       .then((data) => {
         const { links } = data;
 
         setIsLoading(false);
-        setUsers(prev => [
-          ...prev,
-          ...data.users,
-        ]);
-        setPages(page + 1);
+        setUsers(prev => (page !== 1
+          ? [
+            ...prev,
+            ...data.users,
+          ]
+          : data.users));
         setCouldBeFetched(!!links.next_url);
       });
+
+    handleResetUsers(false);
   };
 
-  useEffect(getUsers, []);
+  useEffect(getUsers, [page]);
 
   const loadMore = () => {
     setIsLoading(true);
-    getUsers();
+    setPages(page + 1);
   };
+
+  if (resetUsers && page !== 1) {
+    setPages(1);
+  }
 
   return (
     <>

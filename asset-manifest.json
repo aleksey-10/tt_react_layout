@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/tt_react_layout/static/css/main.ef5cf893.chunk.css",
-    "main.js": "/tt_react_layout/static/js/main.bc3ca353.chunk.js",
-    "main.js.map": "/tt_react_layout/static/js/main.bc3ca353.chunk.js.map",
+    "main.css": "/tt_react_layout/static/css/main.1d886744.chunk.css",
+    "main.js": "/tt_react_layout/static/js/main.79a7b0b2.chunk.js",
+    "main.js.map": "/tt_react_layout/static/js/main.79a7b0b2.chunk.js.map",
     "runtime-main.js": "/tt_react_layout/static/js/runtime-main.69117831.js",
     "runtime-main.js.map": "/tt_react_layout/static/js/runtime-main.69117831.js.map",
     "static/css/2.af3c1da9.chunk.css": "/tt_react_layout/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.579d9ae7.chunk.js": "/tt_react_layout/static/js/2.579d9ae7.chunk.js",
-    "static/js/2.579d9ae7.chunk.js.map": "/tt_react_layout/static/js/2.579d9ae7.chunk.js.map",
+    "static/js/2.4e02ecdd.chunk.js": "/tt_react_layout/static/js/2.4e02ecdd.chunk.js",
+    "static/js/2.4e02ecdd.chunk.js.map": "/tt_react_layout/static/js/2.4e02ecdd.chunk.js.map",
     "index.html": "/tt_react_layout/index.html",
-    "precache-manifest.302a04e5751f676c248d02c5d58b296e.js": "/tt_react_layout/precache-manifest.302a04e5751f676c248d02c5d58b296e.js",
+    "precache-manifest.c3b605c89a643298212949fd74da782c.js": "/tt_react_layout/precache-manifest.c3b605c89a643298212949fd74da782c.js",
     "service-worker.js": "/tt_react_layout/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/tt_react_layout/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.ef5cf893.chunk.css.map": "/tt_react_layout/static/css/main.ef5cf893.chunk.css.map",
-    "static/js/2.579d9ae7.chunk.js.LICENSE.txt": "/tt_react_layout/static/js/2.579d9ae7.chunk.js.LICENSE.txt",
+    "static/css/main.1d886744.chunk.css.map": "/tt_react_layout/static/css/main.1d886744.chunk.css.map",
+    "static/js/2.4e02ecdd.chunk.js.LICENSE.txt": "/tt_react_layout/static/js/2.4e02ecdd.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/tt_react_layout/static/media/burger.6f6bef28.svg",
     "static/media/logo.svg": "/tt_react_layout/static/media/logo.146e2926.svg",
     "static/media/man-laptop-v1.svg": "/tt_react_layout/static/media/man-laptop-v1.3cdf7897.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.69117831.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.579d9ae7.chunk.js",
-    "static/css/main.ef5cf893.chunk.css",
-    "static/js/main.bc3ca353.chunk.js"
+    "static/js/2.4e02ecdd.chunk.js",
+    "static/css/main.1d886744.chunk.css",
+    "static/js/main.79a7b0b2.chunk.js"
   ]
 }

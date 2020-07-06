@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c8c5b6542e9992428f10307bc857dde",
+    "revision": "7569064af024a64016e243d56c4ee1bf",
     "url": "/tt_react_layout/index.html"
   },
   {
-    "revision": "3020677698ac9853a95e",
+    "revision": "83249a0810a1197c93b8",
     "url": "/tt_react_layout/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "5cd284f1e3b20b7c5858",
-    "url": "/tt_react_layout/static/css/main.ef5cf893.chunk.css"
+    "revision": "a4d0fc8c0c609028e246",
+    "url": "/tt_react_layout/static/css/main.1d886744.chunk.css"
   },
   {
-    "revision": "3020677698ac9853a95e",
-    "url": "/tt_react_layout/static/js/2.579d9ae7.chunk.js"
+    "revision": "83249a0810a1197c93b8",
+    "url": "/tt_react_layout/static/js/2.4e02ecdd.chunk.js"
   },
   {
     "revision": "8b6110170448e079288e94565f0c2b27",
-    "url": "/tt_react_layout/static/js/2.579d9ae7.chunk.js.LICENSE.txt"
+    "url": "/tt_react_layout/static/js/2.4e02ecdd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5cd284f1e3b20b7c5858",
-    "url": "/tt_react_layout/static/js/main.bc3ca353.chunk.js"
+    "revision": "a4d0fc8c0c609028e246",
+    "url": "/tt_react_layout/static/js/main.79a7b0b2.chunk.js"
   },
   {
     "revision": "9435f914f47c49e9fe7a",

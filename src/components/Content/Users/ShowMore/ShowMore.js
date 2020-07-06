@@ -9,6 +9,7 @@ export const ShowMore = memo(
         type="button"
         className="users__button button"
         onClick={handleClick}
+        disabled={isLoading}
       >
         Show more
       </button>

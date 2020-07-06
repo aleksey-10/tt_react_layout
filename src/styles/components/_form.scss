@@ -67,6 +67,19 @@
   &__button {
     margin: 40px auto 0;
   }
+
+  &__show-more {
+    position: relative;
+    margin: 0 auto;
+    width: 210px;
+  }
+
+  &__loader {
+    position: absolute;
+    transform: scale(0.5) translate(50%, -50%);
+    right: -50px;
+    top: 0;
+  }
 }
 
 .custom-file-label {

@@ -9,9 +9,12 @@ import { PositionField } from '../PositionField/PositionField';
 import { PhotoField } from '../PhotoField/PhotoField';
 import { api } from '../../../../api/api';
 import { Context } from '../../../../context';
+import { Loader } from '../../../common/Loader';
 
 export const Form = () => {
   const { handleResetUsers } = useContext(Context);
+
+  const [isSending, setIsSending] = useState();
 
   const {
     register,
@@ -22,6 +25,8 @@ export const Form = () => {
   } = useForm({ mode: 'onBlur' });
 
   const onSubmit = (data) => {
+    setIsSending(true);
+
     const formData = new FormData();
 
     formData.append('position_id', data.position_id);
@@ -30,10 +35,13 @@ export const Form = () => {
     formData.append('phone', data.phone);
     formData.append('photo', data.photo[0]);
 
-    api.sendUserData(formData);
+    setIsSending(false);
 
-    reset();
-    handleResetUsers(true);
+    api.sendUserData(formData).then(() => {
+      handleShow();
+      reset();
+      handleResetUsers(true);
+    });
   };
 
   const [show, setShow] = useState(false);
@@ -52,14 +60,22 @@ export const Form = () => {
         <PhoneField register={register} error={errors.phone} />
         <PositionField register={register} error={errors} />
         <PhotoField register={register} error={errors.photo} />
-        <button
-          type="submit"
-          className="form__button button"
-          onClick={handleShow}
-          disabled={!formState.isValid}
-        >
-          Sign up now
-        </button>
+        <div className="form__show-more">
+          <button
+            type="submit"
+            className="form__button button"
+            disabled={!formState.isValid}
+          >
+            Sign up now
+          </button>
+          {
+            isSending && (
+              <div className="form__loader">
+                <Loader />
+              </div>
+            )
+          }
+        </div>
       </form>
       <ModalWindow show={show} handleClose={handleClose} />
     </>

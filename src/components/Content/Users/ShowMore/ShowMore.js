@@ -6,11 +6,12 @@ export const ShowMore = memo(
   ({ isLoading, handleClick }) => (
     <div className="users__show-more">
       <button
+        type="button"
         className="users__button button"
         onClick={handleClick}
       >
         Show more
-    </button>
+      </button>
       {
         isLoading && (
           <div className="users__loader">

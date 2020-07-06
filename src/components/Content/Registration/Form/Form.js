@@ -63,7 +63,7 @@ export const Form = () => {
           <button
             type="submit"
             className="form__button button"
-            disabled={!formState.isValid}
+            disabled={!formState.isValid || isSending}
           >
             Sign up now
           </button>

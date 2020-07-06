@@ -15,7 +15,7 @@ export const User = memo(
       <OverlayTrigger
         overlay={<Tooltip id={`tooltip-${email}${id}`}>{email}</Tooltip>}
       >
-        <span className="user__email">{email}</span>
+        <a className="user__email" href={`mailto:${email}`}>{email}</a>
       </OverlayTrigger>
       <span className="user__phone">{phone}</span>
     </li>

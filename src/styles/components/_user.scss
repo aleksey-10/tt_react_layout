@@ -4,7 +4,9 @@
   width: 200px;
 
   &__email {
+    color: inherit;
     @include text-overflow;
+    @include hover(color, darken($color-primary, 10%));
   }
 
   &__photo {

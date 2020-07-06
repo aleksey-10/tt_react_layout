@@ -29,7 +29,7 @@ export const Form = () => {
     formData.append('phone', data.phone);
     formData.append('photo', data.photo[0]);
 
-    // api.sendUserData(formData);
+    api.sendUserData(formData);
 
     reset();
     handleResetUsers(true);

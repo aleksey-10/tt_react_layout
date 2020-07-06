@@ -35,9 +35,8 @@ export const Form = () => {
     formData.append('phone', data.phone);
     formData.append('photo', data.photo[0]);
 
-    setIsSending(false);
-
     api.sendUserData(formData).then(() => {
+      setIsSending(false);
       handleShow();
       reset();
       handleResetUsers(true);

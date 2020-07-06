@@ -40,6 +40,7 @@ export const UsersList = (props) => {
   };
 
   if (resetUsers && page !== 1) {
+    setIsLoading(true);
     setPages(1);
   }
 
@@ -55,6 +56,7 @@ export const UsersList = (props) => {
               position={user.position}
               email={user.email}
               phone={user.phone}
+              id={user.id}
             />
           ))
         }

@@ -20,6 +20,7 @@ export const Form = () => {
     handleSubmit,
     reset,
   } = useForm({ mode: 'onBlur' });
+
   const onSubmit = (data) => {
     const formData = new FormData();
 
